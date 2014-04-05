@@ -4,8 +4,8 @@ Install_Dir = /usr/bin
 
 CFILES = multi_kloader.c
 
-Extra_CC_Flags = -Wall  -DINLINE_IT_ALL
-Extra_LD_Flags = -dead_strip -framework IOKit -framework CoreFoundation
+Extra_CC_Flags = -Wall  -DINLINE_IT_ALL -no-integrated-as
+Extra_LD_Flags = -framework IOKit -framework CoreFoundation
 
 include $(MAKEFILEPATH)/CoreOS/ReleaseControl/BSDCommon.make
 
